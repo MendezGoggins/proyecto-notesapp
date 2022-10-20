@@ -1,18 +1,36 @@
+{{> header title="Notes" isLogin=isLogin username=username }}
 <div id="login-form">
-    <h2>Notes</h2>
     <a href="/notes/add">
-        <button>
+        <button class="btn btn-primary">
             Add note
         </button>
     </a>
-    <table>
+    <table class="table">
         <tr>
-            <td>Title</td>
-            <td>Description</td>
+            <th>Title</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
         </tr>
+        {{#each notes}}
         <tr>
-            <td>Title</td>
-            <td>Description</td>
+            <td>{{this.title}}</td>
+            <td>{{this.description}}</td>
+            <td>
+                <a href="/notes/edit/{{this._id}}">
+                    <button  class="btn btn-warning">
+                        Edit
+                    </button>
+                </a>
+            </td>
+            <td>
+                <form action="/notes/delete/{{this._id}}" method="POST">
+                    <button  class="btn btn-danger" type="submit">
+                        Delete
+                    </button>
+                </form>
+            </td>
         </tr>
+        {{/each}}
     </table>
 </div>

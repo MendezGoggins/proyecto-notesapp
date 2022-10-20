@@ -1,0 +1,19 @@
+<div class="flex full-width">
+    <h1 class= "full-width">{{title}} </h1>
+    <div class="flex">
+        <div class="username">
+            {{username}}
+        </div>
+        <div>
+            {{#if isLogin}}
+            <a href="/logout">
+               <button type="submit" class="btn btn-primary">Logout</button> 
+            </a>
+            {{else}}
+            <a href="/login">
+               <button type="submit" class="btn btn-primary">Login</button> 
+            </a>
+            {{/if}}
+        </div>
+    </div>
+</div>

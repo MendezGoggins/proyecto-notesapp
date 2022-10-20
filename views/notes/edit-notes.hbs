@@ -1,0 +1,16 @@
+{{> header title="Add Note" isLogin=isLogin username=username }}
+<div id="login-form">
+  <form action="/notes/edit/{{note._id}}" method="POST">
+
+    <label> Title
+      <input type="text" class="form-control" name="title" value="{{note.title}}" placeholder="Title" />
+    </label>
+
+    <label> Description
+      <input type="text" class="form-control" name="description" value="{{note.description}}" placeholder="Description" />
+    </label>
+
+    <button type="submit" class="btn btn-primary">Edit note</button>
+
+  </form>
+</div>

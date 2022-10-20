@@ -1,7 +1,9 @@
-<h1>{{appTitle}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
+{{> header title=title isLogin=isLogin username=username }}
+ <!-- header es para nombrar la plantilla, los siguientes son las variables que le voy a inyectar a
+ la plantilla. En este caso, estamos juntando title de index.routes.js con title de notes.hbs, igul con isLogin. Este archivo index.hbs está sirviendo "de intermediario" -->
+<p>Se pueden crear notas, editarlas y eliminarlas!!!1!!11!!!</p> 
 <a href="/notes">
-<button>
-    Go to Notes
-</button>
+    <button class="btn btn-primary">
+        Go to Notes
+    </button>
 </a>

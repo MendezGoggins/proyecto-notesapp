@@ -1,6 +1,9 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+* {
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 a {
@@ -10,3 +13,18 @@ a {
 h1 {
   color: 15px;
 }
+
+.flex {
+  display: flex;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.username{
+  padding-right: 5px;
+  white-space: nowrap;
+}
+ 

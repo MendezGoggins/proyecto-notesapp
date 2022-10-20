@@ -12,6 +12,7 @@ const express = require("express");
 // Handles the handlebars
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
+hbs.registerPartials(__dirname + '/views/partials', function (err) {});
 
 const app = express();
 
@@ -28,7 +29,7 @@ const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
 
 const authRoutes = require("./routes/auth.routes");
-app.use("/auth", authRoutes);
+app.use("/", authRoutes);
 
 const notesRoutes = require("./routes/notes.routes");
 app.use("/notes", notesRoutes);
